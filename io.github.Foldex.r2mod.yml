@@ -42,7 +42,12 @@ modules:
       - type: archive
         url : https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.2.tar.gz
         sha256: 52208ca33a099464ba32e8360604320d51c9aed8cf9085e102b07e262028d1f8
-  
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Foldex/r2mod_cli/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
+
   # 7zip for extracting archives
   - name: p7zip
     buildsystem: simple
@@ -51,8 +56,13 @@ modules:
       - install -D -m 0755 bin/7za ${FLATPAK_DEST}/bin/7z
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz 
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef 
+        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz
+        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
 
   # Regex Lib Needed by jq
   - name: oniguruma
@@ -61,11 +71,21 @@ modules:
       - type: archive
         url: https://github.com/kkos/oniguruma/releases/download/v6.9.8/onig-6.9.8.tar.gz
         sha256: 28cd62c1464623c7910565fb1ccaaa0104b2fe8b12bcd646e81f73b47535213e
+        x-checker-data:
+          type: anitya
+          project-id: 11184
+          stable-only: true
+          url-template: https://github.com/kkos/oniguruma/archive/refs/tags/v${version}.tar.gz
 
   # JSON parser
   - name: jq
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/stedolan/jq/releases/download/jq-1.6/jq-1.6.tar.gz 
-        sha256: 5de8c8e29aaa3fb9cc6b47bb27299f271354ebb72514e3accadc7d38b5bbaa72 
+        url: https://github.com/stedolan/jq/releases/download/jq-1.6/jq-1.6.tar.gz
+        sha256: 5de8c8e29aaa3fb9cc6b47bb27299f271354ebb72514e3accadc7d38b5bbaa72
+        x-checker-data:
+          type: anitya
+          project-id: 13252
+          stable-only: true
+          url-template: https://github.com/stedolan/jq/archive/refs/tags/jq-${version}.tar.gz
