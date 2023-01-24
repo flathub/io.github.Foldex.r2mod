@@ -40,8 +40,8 @@ modules:
       - make flatpak
     sources:
       - type: archive
-        url : https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.2.tar.gz
-        sha256: 52208ca33a099464ba32e8360604320d51c9aed8cf9085e102b07e262028d1f8
+        url : https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.3.tar.gz
+        sha256: ce3246afdb2789432f41c4547648233dfce7d5b2c6874ce1e849bb06f4a6fe38
   
   # 7zip for extracting archives
   - name: p7zip
@@ -51,7 +51,7 @@ modules:
       - install -D -m 0755 bin/7za ${FLATPAK_DEST}/bin/7z
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz 
+        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.04.tar.gz
         sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef 
 
   # Regex Lib Needed by jq
