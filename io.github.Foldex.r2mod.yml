@@ -8,16 +8,16 @@ finish-args:
   # Needs Network to DL Mods
   - --share=network
   # Normal Steam
-  - --filesystem=xdg-data/Steam/steamapps/common/Risk of Rain 2
-  - --filesystem=xdg-data/Steam/steamapps/compatdata/632360
+  - --filesystem=~/.local/share/Steam/steamapps/common/Risk of Rain 2
+  - --filesystem=~/.local/share/Steam/steamapps/compatdata/632360
   # Flatpak Steam
   - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk of Rain 2
   - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/632360
   # tmp is where DLs go
   - --filesystem=/tmp/r2mod:create
   # Needed to install completions
-  - --filesystem=xdg-data/bash-completion/completions/:create
-  - --filesystem=xdg-data/zsh/site-functions/:create
+  - --filesystem=~/.local/share/bash-completion/completions/:create
+  - --filesystem=~/.local/share/zsh/site-functions/:create
   # Environment Vars
   - --env=R2MOD_INSTALL_DIR=default
   - --env=R2MOD_COMPAT_DIR=default
@@ -26,7 +26,6 @@ cleanup:
   - '*.a'
   - '*.la'
   - '/include'
-  - '/lib/debug'
   - '/lib/pkgconfig'
   - '/share/doc'
   - '/share/man'
@@ -40,8 +39,8 @@ modules:
       - make flatpak
     sources:
       - type: archive
-        url : https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.2.tar.gz
-        sha256: 52208ca33a099464ba32e8360604320d51c9aed8cf9085e102b07e262028d1f8
+        url : https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.3.tar.gz
+        sha256: ce3246afdb2789432f41c4547648233dfce7d5b2c6874ce1e849bb06f4a6fe38
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Foldex/r2mod_cli/releases/latest
@@ -56,8 +55,8 @@ modules:
       - install -D -m 0755 bin/7za ${FLATPAK_DEST}/bin/7z
     sources:
       - type: archive
-        url: https://github.com/jinfeihan57/p7zip/archive/refs/tags/v17.04.tar.gz
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
+        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.04.tar.gz
+        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef 
         x-checker-data:
           type: json
           url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
