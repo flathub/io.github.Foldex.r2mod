@@ -11,7 +11,8 @@ finish-args:
   - --filesystem=~/.local/share/Steam/steamapps/common/Risk of Rain 2
   - --filesystem=~/.local/share/Steam/steamapps/compatdata/632360
   # Flatpak Steam
-  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk of Rain 2
+  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk
+    of Rain 2
   - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/632360
   # tmp is where DLs go
   - --filesystem=/tmp/r2mod:create
@@ -25,11 +26,11 @@ finish-args:
 cleanup:
   - '*.a'
   - '*.la'
-  - '/include'
-  - '/lib/pkgconfig'
-  - '/share/doc'
-  - '/share/man'
-  - '/bin/onig-config'
+  - /include
+  - /lib/pkgconfig
+  - /share/doc
+  - /share/man
+  - /bin/onig-config
 
 modules:
   # Main program
@@ -40,8 +41,8 @@ modules:
     sources:
       - type: archive
         dest-filename: r2mod.tar.gz
-        url: https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.3.tar.gz
-        sha256: ce3246afdb2789432f41c4547648233dfce7d5b2c6874ce1e849bb06f4a6fe38
+        url: https://api.github.com/repos/Foldex/r2mod_cli/tarball/v1.3.3
+        sha256: f6ee0656c33d5ff5c73eec1f861005ebf02a02ed7bf6a644fb27c1b221168c92
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Foldex/r2mod_cli/releases/latest
@@ -57,8 +58,8 @@ modules:
     sources:
       - type: archive
         dest-filename: p7zip.tar.gz
-        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.04.tar.gz
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef 
+        url: https://api.github.com/repos/p7zip-project/p7zip/tarball/v17.04
+        sha256: f9957327ff24bd3d37f48c28b613dbf2a086b314dc7a6046816020ece7ff25aa
         x-checker-data:
           type: json
           url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
@@ -70,8 +71,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/kkos/oniguruma/releases/download/v6.9.8/onig-6.9.8.tar.gz
-        sha256: 28cd62c1464623c7910565fb1ccaaa0104b2fe8b12bcd646e81f73b47535213e
+        url: https://github.com/kkos/oniguruma/archive/refs/tags/v6.9.8.tar.gz
+        sha256: ab11578e94993675bdd4fef77650a1e32fa56538233d486b84f9c14abde82148
         x-checker-data:
           type: anitya
           project-id: 11184
@@ -83,8 +84,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/stedolan/jq/releases/download/jq-1.6/jq-1.6.tar.gz
-        sha256: 5de8c8e29aaa3fb9cc6b47bb27299f271354ebb72514e3accadc7d38b5bbaa72
+        url: https://github.com/stedolan/jq/archive/refs/tags/jq-1.6.tar.gz
+        sha256: c963dce42cf28d1f848013485ac708627e665a4028013bb90209add43add9763
         x-checker-data:
           type: anitya
           project-id: 13252
