@@ -58,7 +58,7 @@ modules:
       - type: archive
         dest-filename: p7zip.tar.gz
         url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.04.tar.gz
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef 
+        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
         x-checker-data:
           type: json
           url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
@@ -76,7 +76,7 @@ modules:
           type: anitya
           project-id: 11184
           stable-only: true
-          url-template: https://github.com/kkos/oniguruma/archive/refs/tags/v${version}.tar.gz
+          url-template: https://github.com/kkos/oniguruma/releases/download/v${version}/onig-${version}.tar.gz
 
   # JSON parser
   - name: jq
@@ -89,4 +89,4 @@ modules:
           type: anitya
           project-id: 13252
           stable-only: true
-          url-template: https://github.com/stedolan/jq/archive/refs/tags/jq-${version}.tar.gz
+          url-template: https://github.com/stedolan/jq/releases/download/jq-${version}/jq-${version}.tar.gz
