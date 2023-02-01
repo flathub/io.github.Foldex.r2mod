@@ -11,8 +11,7 @@ finish-args:
   - --filesystem=~/.local/share/Steam/steamapps/common/Risk of Rain 2
   - --filesystem=~/.local/share/Steam/steamapps/compatdata/632360
   # Flatpak Steam
-  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk
-    of Rain 2
+  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk of Rain 2
   - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/632360
   # tmp is where DLs go
   - --filesystem=/tmp/r2mod:create
