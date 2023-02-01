@@ -25,11 +25,11 @@ finish-args:
 cleanup:
   - '*.a'
   - '*.la'
-  - '/include'
-  - '/lib/pkgconfig'
-  - '/share/doc'
-  - '/share/man'
-  - '/bin/onig-config'
+  - /include
+  - /lib/pkgconfig
+  - /share/doc
+  - /share/man
+  - /bin/onig-config
 
 modules:
   # Main program
@@ -40,8 +40,8 @@ modules:
     sources:
       - type: archive
         dest-filename: r2mod.tar.gz
-        url: https://github.com/Foldex/r2mod_cli/archive/refs/tags/v1.3.3.tar.gz
-        sha256: ce3246afdb2789432f41c4547648233dfce7d5b2c6874ce1e849bb06f4a6fe38
+        url: https://api.github.com/repos/Foldex/r2mod_cli/tarball/v1.3.3
+        sha256: 64ecf2d2fcb860db96fb859788c7136b4b8953ec36dcea3e5f7da2c60d805e6d
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Foldex/r2mod_cli/releases/latest
@@ -57,8 +57,8 @@ modules:
     sources:
       - type: archive
         dest-filename: p7zip.tar.gz
-        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.04.tar.gz
-        sha256: ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef
+        url: https://api.github.com/repos/p7zip-project/p7zip/tarball/v17.04
+        sha256: 4c81c7ee8a0dbd81200cdcab45116d224e8b642160ca505a10d083be0c53b043
         x-checker-data:
           type: json
           url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
