@@ -11,7 +11,8 @@ finish-args:
   - --filesystem=~/.local/share/Steam/steamapps/common/Risk of Rain 2
   - --filesystem=~/.local/share/Steam/steamapps/compatdata/632360
   # Flatpak Steam
-  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk of Rain 2
+  - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Risk
+    of Rain 2
   - --filesystem=~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/632360
   # tmp is where DLs go
   - --filesystem=/tmp/r2mod:create
@@ -57,8 +58,8 @@ modules:
     sources:
       - type: archive
         dest-filename: p7zip.tar.gz
-        url: https://api.github.com/repos/p7zip-project/p7zip/tarball/v17.04
-        sha256: 4c81c7ee8a0dbd81200cdcab45116d224e8b642160ca505a10d083be0c53b043
+        url: https://api.github.com/repos/p7zip-project/p7zip/tarball/v17.05
+        sha256: 0485bcd41d4f7f0688de7dc5a276d2999b6a62b1fec12e45113b3ee4b1757346
         x-checker-data:
           type: json
           url: https://api.github.com/repos/p7zip-project/p7zip/releases/latest
