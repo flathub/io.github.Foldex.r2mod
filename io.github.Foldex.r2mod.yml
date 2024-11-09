@@ -41,8 +41,8 @@ modules:
     sources:
       - type: archive
         dest-filename: r2mod.tar.gz
-        url: https://api.github.com/repos/Foldex/r2mod_cli/tarball/v1.3.3
-        sha256: 64ecf2d2fcb860db96fb859788c7136b4b8953ec36dcea3e5f7da2c60d805e6d
+        url: https://api.github.com/repos/Foldex/r2mod_cli/tarball/v1.3.3.1
+        sha256: f0a04b710a63839dfef425f2972d19aa7af61904a951286495e749ec1862ee1e
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Foldex/r2mod_cli/releases/latest
